@@ -71,19 +71,19 @@ let clear = (arrayName) => {
   if (!arrayName) {
       return ;
   }
-  if (arrayName !== 'kicks' || arrayName !== 'snares' || arrayName !== 'hiHats' ||  arrayName !== 'rideCymbals') {
+
+  if (arrayName !== 'kicks' && arrayName !== 'snares' && arrayName !== 'hiHats' &&  arrayName !== 'rideCymbals') {
       return ;
-  } 
+    } 
 
-    let drums = getDrums(arrayName);
+let drums = getDrums(arrayName);
 
-     if (drums) {
-       drums.fill(false);
-  }
-    
-  
-  
+/*if (drums) {
+    drums.fill(false);
+}*/
 
+for (let i = 0; i < drums.length; i++) {
+    drums[i] = !drums[i];
 }
 
-
+};
