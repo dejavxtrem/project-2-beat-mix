@@ -66,3 +66,24 @@ const toggleDrum = (arrayName, index) => {
 }
 
 
+
+let clear = (arrayName) => {
+  if (!arrayName) {
+      return ;
+  }
+  if (arrayName !== 'kicks' || arrayName !== 'snares' || arrayName !== 'hiHats' ||  arrayName !== 'rideCymbals') {
+      return ;
+  } 
+
+    let drums = getDrums(arrayName);
+
+     if (drums) {
+       drums.fill(false);
+  }
+    
+  
+  
+
+}
+
+
