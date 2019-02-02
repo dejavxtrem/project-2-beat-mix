@@ -87,3 +87,24 @@ for (let i = 0; i < drums.length; i++) {
 }
 
 };
+
+let invert = (arrayName) => {
+  if (!arrayName) {
+      return ;
+  }
+
+  const arrays =['kicks', 'snares', 'hiHats', 'rideCymbals'];
+
+  if (!arrays.includes(arrayName)) {
+      return ;
+  }
+
+let drums = getDrums(arrayName)
+  for(let i = 0; i < drums.length; i++) {
+      drums[i] = !drums[i];
+  }
+}
+
+
+
+
